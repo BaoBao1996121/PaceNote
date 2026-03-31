@@ -1,0 +1,47 @@
+{
+    "_comment": "PaceNote Skill 分类配置示例",
+    "_ai_prompt": "将此文件发给 Copilot 说: '帮我配置 skill_categories.json，我的项目有以下模块: ...'",
+    
+    "categories": {
+        "common": {
+            "display_name": "通用工作流",
+            "description": "核心工作流 Skills，所有项目通用",
+            "prefixes": [],
+            "always_included": true,
+            "_note": "没有前缀的 Skill 自动归入此类"
+        },
+        "platform": {
+            "display_name": "平台层",
+            "description": "平台/框架层的域专家",
+            "prefixes": ["{{PLATFORM_PREFIX}}-"],
+            "_example": "如果你的平台前缀是 myplatform，域专家命名为 myplatform-auth-expert"
+        },
+        "app-example": {
+            "display_name": "示例应用",
+            "description": "你的应用域专家（修改此项）",
+            "prefixes": ["app-myapp-"],
+            "_example": "如果你的应用叫 myapp，域专家命名为 app-myapp-cart-expert"
+        }
+    },
+    
+    "presets": {
+        "full": {
+            "display_name": "完整部署",
+            "categories": ["common", "platform", "app-example"],
+            "description": "部署所有 Skills"
+        },
+        "minimal": {
+            "display_name": "最小部署",
+            "categories": ["common"],
+            "description": "仅部署核心工作流 Skills"
+        }
+    },
+    
+    "projects": {
+        "_comment": "按项目分组 Skills（可选）",
+        "my-project": {
+            "display_name": "我的项目",
+            "categories": ["common", "platform", "app-example"]
+        }
+    }
+}

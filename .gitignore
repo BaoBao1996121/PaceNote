@@ -1,0 +1,23 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+*.egg
+
+# VS Code
+.vscode/
+!.vscode/settings.json.example
+
+# OS
+.DS_Store
+Thumbs.db
+
+# 用户配置（含敏感信息）
+data/shared_config.json
+data/user_preferences.json
+
+# 临时文件
+.copilot-temp/
+*.log

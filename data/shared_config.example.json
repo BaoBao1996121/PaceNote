@@ -1,0 +1,25 @@
+{
+    "_comment": "PaceNote 连接配置示例 — 复制为 shared_config.json 并填入真实值",
+    "_ai_prompt": "将此文件发给 Copilot 说: '帮我填充 shared_config.json，我的项目信息是... '",
+    
+    "lark": {
+        "_comment": "飞书/Lark MCP 配置（可选，用于将文档发布到飞书）",
+        "app_id": "",
+        "app_secret": ""
+    },
+    "devops": {
+        "_comment": "Azure DevOps 配置（可选，用于读取工作项/PBI）",
+        "org_url": "https://your-devops-server.example.com/YourOrg",
+        "project": "YourProject",
+        "pat": ""
+    },
+    "github": {
+        "_comment": "GitHub 配置（可选，用于读取 Issues/PRs）",
+        "repo": "owner/repo",
+        "token": ""
+    },
+    "reviewer": {
+        "name": "Your Name",
+        "email": "you@example.com"
+    }
+}
